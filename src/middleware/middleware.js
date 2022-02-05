@@ -8,7 +8,7 @@ const connection = require('../app/database')
 const getImage = (ctx, next) => {
     const { name } = ctx.request.params
     ctx.response.set('content-type', 'image/jpeg')
-    ctx.body = fs.createReadStream(`./static/poster/${name}.jpg`)
+    ctx.body = fs.createReadStream(`./static/poster/${name}`)
 }
 //获取首页列表信息
 const getMovieList = async (ctx, next) => {
