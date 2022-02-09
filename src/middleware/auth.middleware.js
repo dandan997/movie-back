@@ -40,6 +40,10 @@ const authVerify = async (ctx,next)=>{
         ctx.app.emit('error',error,ctx)
     }
 }
+//返回用户信息
+const getUserInfo = (ctx,next)=>{
+    ctx.body = ctx.user
+}
 
 
-module.exports = {login,authVerify}
+module.exports = {login,authVerify,getUserInfo}
